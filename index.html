@@ -9,7 +9,7 @@
         <meta name="application-name" content="Iframe PWA">
         <meta name="apple-mobile-web-app-title" content="Iframe PWA">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="/pwa-via-iframe/manifest.json">
         <style>
             body, html {
                 overflow: hidden;
@@ -26,7 +26,7 @@
             var serviceWorkerReg = false;
             window.addEventListener('load', function() {
                 if ('serviceWorker' in navigator) {
-                    serviceWorkerReg = navigator.serviceWorker.register('/service-worker.js');
+                    serviceWorkerReg = navigator.serviceWorker.register('/pwa-via-iframe/service-worker.js');
                 }
             });
         </script>

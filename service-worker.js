@@ -20,7 +20,7 @@ self.addEventListener('fetch', function(event) {
         event.respondWith(
             fetch(request).catch(function(error) {
                 return caches.open('offline').then(function(cache) {
-                    return cache.match('/offline.html');
+                    return cache.match('/pwa-via-iframe/offline.html');
                 });
             })
         );
